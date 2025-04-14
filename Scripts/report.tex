@@ -1,0 +1,143 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\title{Credit Card Clustering}
+\author{Nestor R. Torrech Boneta}
+\date{\today}
+
+\newcommand{\imgpath}{C:/Career Projects/Credit Card Clustering/Outputs/Images}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+\section{Introduction}
+
+This project aimed to segment credit card users into meaningful groups based on their financial behavior using unsupervised machine learning. Specifically, we applied K-Means clustering to a dataset of credit card clients, with the ultimate goal of identifying which customer segments might be ideal candidates for credit limit increases. By grouping users based on usage patterns rather than arbitrary thresholds, this approach allows financial institutions to personalize credit strategies more effectively and responsibly.
+\section{Overview of Clustering Analysis}
+
+\subsection{Feature Engineering and Selection}
+
+Two key engineered variables were central to our clustering approach:
+
+\begin{itemize}
+    \item \textbf{Balance to Credit Limit Ratio (Balance\_Limit\_Ratio)}: This metric calculates how close a user's current balance is to their assigned credit limit. It serves as a proxy for credit utilization and financial strain. Higher values may indicate users who are either overleveraged or simply making full use of their available credit.
+    
+    \item \textbf{Average Purchases to Credit Limit Ratio (Avg\_Purchases\_Limit\_Ratio)}: This feature compares users' average purchases to their credit limit. It captures ongoing spending behavior relative to capacity and helps distinguish between users who regularly use their credit for purchases and those who don’t.
+\end{itemize}
+
+These two ratios normalized spending behavior across clients with varying credit limits and helped reduce scale bias during clustering. They were particularly useful for creating intuitive visualizations of customer segments in the original feature space.
+
+\subsection{Cluster Evaluation and Insights}
+
+The number of clusters was initially determined using the Elbow Method and later refined based on silhouette scores and visual inspection. While three clusters provided a clear inflection point, we explored four and even five clusters to assess whether additional groupings provided more actionable insight.
+
+Through this segmentation, we were able to identify specific groups of users who demonstrated low credit utilization and moderate purchase activity—prime candidates for a potential credit limit increase. On the other hand, high-utilization, high-purchase clusters were flagged for further risk assessment.
+
+\newpage
+\section{Determining Optimal Cluster Count with the Elbow Method}
+
+To determine the optimal number of clusters for our K-Means analysis, we employed the \textbf{Elbow Method}, a common heuristic that evaluates the total within-cluster sum of squares (inertia) for a range of cluster counts. The idea behind the method is to identify the value of \( k \) at which the inertia begins to decrease at a slower rate—forming an "elbow" in the plot.
+
+In our case, we tested values of \( k \) ranging from 1 to 10. As shown in Figure~\ref{fig:elbow}, the inertia sharply decreased from \( k = 1 \) to \( k = 3 \), after which the rate of improvement diminished. Based on this visual inspection, we selected \textbf{three clusters} as our initial clustering configuration.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.65\linewidth]{\imgpath/elbow.png} 
+    \caption{Elbow Method plot showing the optimal cluster count}
+    \label{fig:elbow}
+\end{figure}
+
+The decision to use three clusters was further validated by calculating the silhouette score and by visualizing cluster separability in the feature space defined by our key variables. While additional cluster counts (e.g., four or five) were later explored, the Elbow Method provided a rational and data-driven foundation for our initial model.
+
+\newpage
+\section{Visualization}
+
+\subsection{Three Clusters}
+For our first round of vizualisation, we performed the clustering analysis on the data without any filters. As mentioned above, we used the three clusters suggested by the elbow method.
+This resulted in Figure~\ref{fig:cluster1}. There we can see the formation of the 3 Client segments, however, the presence of large outlier values obscures our capacity to clearly visualize the differences between the groups.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.65\linewidth]{\imgpath/cluster_graph1.png} 
+    \caption{Three Clusters with Outliers}
+    \label{fig:cluster1}
+\end{figure}
+
+
+While these outliers are important to document, for the purposes of seeing our clusters, we are best off filtering them out. This way we can get a better idea of what features define each segment.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.65\linewidth]{\imgpath/clusters_2.png} 
+    \caption{Three Clusters without Outliers}
+    \label{fig:cluster2}
+\end{figure}
+
+\newpage
+\subsection{Additional Clusters}
+Getting rid of the outliers, we know have a clearer idea of the groups which are forming. That being said, even through the elbow method suggests that three clusters are the optimum, judgementally, I think there is space to experiment with more. To get a good rule of thumb as to how useful additional clusters are, let's apply the silhouette method.
+
+The following Silhouette Scores were calculated:
+
+\begin{itemize}
+    \item Silhouette Score ($k=3$): 0.544
+    \item Silhouette Score ($k=4$): 0.441
+    \item Silhouette Score ($k=5$): 0.472
+    \item Silhouette Score ($k=6$): 0.472
+\end{itemize}
+
+From this analysis, it is observed that the highest silhouette score occurs at $k=3$, suggesting that this configuration provides the most cohesive and well-separated clustering. 
+
+Although increasing the number of clusters to $k=4$ or $k=5$ introduces new groupings, the corresponding drop in the Silhouette Score implies that these additional clusters may not add meaningful segmentation, and in fact, might represent overlapping or less distinct groups. 
+
+Nonetheless, slight improvements at $k=5$ and $k=6$ compared to $k=4$ suggest that while the additional clusters are not as optimal as $k=3$, they might still offer value for specific targeted analyses. Ultimately, a balance between interpretability and statistical strength should guide the final selection of $k$.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.65\linewidth]{\imgpath/clusters_3_overcluster.png} 
+    \caption{Additional Clusters}
+    \label{fig:cluster3}
+\end{figure}
+
+With the new clusters, we can see that the larger groups we saw before have been split up. We can see in greater detail different segments that were consolidated before. Of particular interest are Segments 5 and 1 which used to be consolidated into one, but have now been split based on one half having higher utilization than the other. Seeing this, for business purposes, we will reconsolidate segments that don't add value to our exercise. For example, both halves of segment 4 can be rejoined to 1 and 5 depending on how high their utilization was. Let's modify the code to reconsolidate these groups.
+
+\subsection{Cluster Consolidation}
+
+After performing clustering with additional groups, we performed a visual inspection of the segments and opted to consolidate some of them to improve interpretability and relevance.
+
+\begin{itemize}
+    \item \textbf{Cluster 3 was merged into Cluster 0}: Based on its position in the feature space and overlap with Cluster 0, all records labeled as Cluster 3 were reassigned to Cluster 0. Broadly speaking, Cluster 0 would correspond to low utilization and low purchases users. Since these clients hardly seem to use their Credit Card, they may not be a good fit for a credit limit increase.
+    
+    \item \textbf{Splitting Cluster 4 based on Utilization Ratio}: Cluster 4 exhibited heterogeneous behavior. To improve interpretability, we split it into two groups based on the \texttt{BALANCE\_LIMIT\_RATIO}, which is a proxy for credit utilization.
+    \begin{itemize}
+        \item Records in Cluster 4 with a \texttt{BALANCE\_LIMIT\_RATIO} above 0.49 (indicating higher utilization) were reassigned to Cluster 5.
+        \item Records in Cluster 4 with a \texttt{BALANCE\_LIMIT\_RATIO} of 0.49 or lower (considered healthier usage) were reassigned to Cluster 1.
+    \end{itemize}
+\end{itemize}
+
+This approach allows for domain-informed segmentation, refining the initial clustering output to better reflect credit behavior patterns. The resulting segmentation is shown below in the original feature space, with clusters colored accordingly.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.7\linewidth]{\imgpath/clusters_final.png}
+    \caption{Consolidated Clusters}
+    \label{fig:clusters_consolidated}
+\end{figure}
+
+
+\section{Conclusion}
+
+Through the application of unsupervised machine learning techniques, we were able to uncover meaningful customer segments without relying on predefined labels. The use of K-Means clustering—supported by both the Elbow Method and Silhouette Analysis—enabled us to explore the natural groupings within the credit card customer data. 
+
+While statistical indicators like the Silhouette Score suggested an optimal cluster count of $k=3$, we made a conscious decision to explore additional clusters in pursuit of greater segmentation granularity. This overclustering, followed by domain-informed consolidation, allowed us to refine the segments to reflect practical business considerations.
+
+One of the most valuable outcomes of this analysis was the identification of the \textbf{Moderate Usage, Moderate Spending} segment. This group, characterized by balanced credit behavior and healthy utilization patterns, presents a promising opportunity for targeted interventions. Specifically, this segment stands out as a strong candidate for a credit limit increase, potentially improving customer satisfaction and engagement while managing risk exposure effectively.
+
+Ultimately, this project highlights the cooperation that should exist between quantitative methods and qualitative judgment. While statistical tools provide a strong foundation, thoughtful interpretation and domain expertise are essential for translating machine learning outputs into actionable business insights.
+
+
+
+\end{document}

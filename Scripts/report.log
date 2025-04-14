@@ -1,0 +1,210 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 24.1) (preloaded format=pdflatex 2025.4.13)  14 APR 2025 07:25
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"c:/Career Projects/Credit Card Clustering/Scripts/report.tex"
+(c:/Career Projects/Credit Card Clustering/Scripts/report.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+(C:\Users\nesto\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(C:\Users\nesto\AppData\Local\Programs\MiKTeX\tex/latex/base\size10.clo
+File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\c@figure=\count193
+\c@table=\count194
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(C:\Users\nesto\AppData\Local\Programs\MiKTeX\tex/latex/base\inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks17
+\inpenc@posthook=\toks18
+)
+(C:\Users\nesto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\nesto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks19
+)
+(C:\Users\nesto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\nesto\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:\Users\nesto\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(C:\Users\nesto\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
+)
+(C:\Users\nesto\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count195
+\l__pdf_internal_box=\box51
+) (report.aux)
+\openout1 = `report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+
+(C:\Users\nesto\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count196
+\scratchdimen=\dimen143
+\scratchbox=\box52
+\nofMPsegments=\count197
+\nofMParguments=\count198
+\everyMPshowfont=\toks20
+\MPscratchCnt=\count199
+\MPscratchDim=\dimen144
+\MPnumerator=\count266
+\makeMPintoPDFobject=\count267
+\everyMPtoPDFconversion=\toks21
+)
+(C:\Users\nesto\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:\Users\nesto\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 13.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 13.
+ [1
+
+{C:/Users/nesto/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+Overfull \hbox (33.82639pt too wide) in paragraph at lines 28--29
+[]\OT1/cmr/bx/n/10 Average Pur-chases to Credit Limit Ra-tio (Avg[]Purchases[]L
+imit[]Ratio)\OT1/cmr/m/n/10 :
+ []
+
+[2]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 42.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 42.
+<C:/Career Projects/Credit Card Clustering/Outputs/Images/elbow.png, id=14, 425
+.9112pt x 327.8649pt>
+File: C:/Career Projects/Credit Card Clustering/Outputs/Images/elbow.png Graphi
+c file (type png)
+<use C:/Career Projects/Credit Card Clustering/Outputs/Images/elbow.png>
+Package pdftex.def Info: C:/Career Projects/Credit Card Clustering/Outputs/Imag
+es/elbow.png  used on input line 48.
+(pdftex.def)             Requested size: 224.2479pt x 172.62192pt.
+ [3 <C:/Career Projects/Credit Card Clustering/Outputs/Images/elbow.png>]
+<C:/Career Projects/Credit Card Clustering/Outputs/Images/cluster_graph1.png, i
+d=21, 406.6392pt x 327.8649pt>
+File: C:/Career Projects/Credit Card Clustering/Outputs/Images/cluster_graph1.p
+ng Graphic file (type png)
+<use C:/Career Projects/Credit Card Clustering/Outputs/Images/cluster_graph1.pn
+g>
+Package pdftex.def Info: C:/Career Projects/Credit Card Clustering/Outputs/Imag
+es/cluster_graph1.png  used on input line 64.
+(pdftex.def)             Requested size: 224.2479pt x 180.81151pt.
+<C:/Career Projects/Credit Card Clustering/Outputs/Images/clusters_2.png, id=22
+, 410.0118pt x 327.8649pt>
+File: C:/Career Projects/Credit Card Clustering/Outputs/Images/clusters_2.png G
+raphic file (type png)
+<use C:/Career Projects/Credit Card Clustering/Outputs/Images/clusters_2.png>
+Package pdftex.def Info: C:/Career Projects/Credit Card Clustering/Outputs/Imag
+es/clusters_2.png  used on input line 74.
+(pdftex.def)             Requested size: 224.2479pt x 179.32068pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[4 <C:/Career Projects/Credit Card Clustering/Outputs/Images/cluster_graph1.png
+>]
+<C:/Career Projects/Credit Card Clustering/Outputs/Images/clusters_3_overcluste
+r.png, id=27, 410.0118pt x 327.8649pt>
+File: C:/Career Projects/Credit Card Clustering/Outputs/Images/clusters_3_overc
+luster.png Graphic file (type png)
+<use C:/Career Projects/Credit Card Clustering/Outputs/Images/clusters_3_overcl
+uster.png>
+Package pdftex.def Info: C:/Career Projects/Credit Card Clustering/Outputs/Imag
+es/clusters_3_overcluster.png  used on input line 100.
+(pdftex.def)             Requested size: 224.2479pt x 179.32068pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[5 <C:/Career Projects/Credit Card Clustering/Outputs/Images/clusters_2.png>]
+[6 <C:/Career Projects/Credit Card Clustering/Outputs/Images/clusters_3_overclu
+ster.png>]
+<C:/Career Projects/Credit Card Clustering/Outputs/Images/clusters_final.png, i
+d=37, 410.0118pt x 327.8649pt>
+File: C:/Career Projects/Credit Card Clustering/Outputs/Images/clusters_final.p
+ng Graphic file (type png)
+<use C:/Career Projects/Credit Card Clustering/Outputs/Images/clusters_final.pn
+g>
+Package pdftex.def Info: C:/Career Projects/Credit Card Clustering/Outputs/Imag
+es/clusters_final.png  used on input line 125.
+(pdftex.def)             Requested size: 241.49895pt x 193.11842pt.
+ [7 <C:/Career Projects/Credit Card Clustering/Outputs/Images/clusters_final.pn
+g>] [8] (report.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 1382 strings out of 474486
+ 25673 string characters out of 5743755
+ 1931542 words of memory out of 5000000
+ 23698 multiletter control sequences out of 15000+600000
+ 562827 words of font info for 52 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 57i,6n,65p,689b,253s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\nesto\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+1000.pk><C:/Users/nesto/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmbx10.pfb><C:/Users/nesto/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmbx12.pfb><C:/Users/nesto/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb><C:/Users/nesto/AppData/Local/Programs/MiKTe
+X/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/nesto/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/nesto/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/nesto/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on report.pdf (8 pages, 1058158 bytes).
+PDF statistics:
+ 80 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+
