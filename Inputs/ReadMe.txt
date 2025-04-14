@@ -20,3 +20,6 @@ PAYMENTS : Amount of Payment done by user
 MINIMUM_PAYMENTS : Minimum amount of payments made by user
 PRCFULLPAYMENT : Percent of full payment paid by user
 TENURE : Tenure of credit card service for user
+
+
+Source: https://www.kaggle.com/datasets/arjunbhasin2013/ccdata/data
